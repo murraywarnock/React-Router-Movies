@@ -1,11 +1,12 @@
-import React, { useState, useEffect, useRouteMatch } from 'react';
+import React, { useState, useEffect, useParams } from 'react';
 import axios from 'axios';
 
 console.log("movie.js called");
 
 export default function Movie(props) {
   const [movie, setMovie] = useState();
-  const { url, path, params } = useRouteMatch()
+  // trying to see what useRouteMatch will give me, but can't get it called.
+  const { url, path, params } = useParams()
 
   console.log('url', url);
   console.log('path', path);

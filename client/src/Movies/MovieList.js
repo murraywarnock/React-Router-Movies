@@ -1,6 +1,6 @@
 import React from 'react';
 // added necessary imports
-import { useHistory, useRouteMatch} from 'react-router-dom'
+import { useHistory, useRouteMatch, Link} from 'react-router-dom'
 // import { Route, useParams, NavLink, useRouteMatch, useHistory, Link } from 'react-router-dom'
 
 // import Movie component
@@ -37,8 +37,9 @@ function MovieDetails(props) {
 
 
   return (
-    // <div className="movie-card">
-    <div className="movie-card" onClick={showMovie} >
+    <Link to={`/movies/${props.movie.id}`}>
+    <div className="movie-card">
+    {/* <div className="movie-card" onClick={showMovie} > */}
       <h2>{title}</h2>
       <div className="movie-director">
         Director: <em>{director}</em>
@@ -47,6 +48,7 @@ function MovieDetails(props) {
         Metascore: <strong>{metascore}</strong>
       </div>
     </div>
+    </Link>
 
 
   // <Link to={`${url}/movies/${id'}>
