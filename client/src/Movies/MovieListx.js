@@ -17,24 +17,16 @@ export default function MovieList(props) {
     </div>
   );
 }
-// const { url, path, params } = useRouteMatch()
-
-// console.log('url', url);
-// console.log('path', path);
-// console.log('params', params);
 
 function MovieDetails(props) {
   // added id to pass through as movieID param
   const { id, title, director, metascore } = props.movie;
   // employed useHistory and id from props to change URL
- 
   const history = useHistory();
   const showMovie = () => {
     history.push(`/movies/${id}`)
 
   };
-
-
 
   return (
     // <div className="movie-card">

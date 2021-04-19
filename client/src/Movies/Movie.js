@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRouteMatch } from 'react';
 import axios from 'axios';
 
 console.log("movie.js called");
 
 export default function Movie(props) {
   const [movie, setMovie] = useState();
+  const { url, path, params } = useRouteMatch()
+
+  console.log('url', url);
+  console.log('path', path);
+  console.log('params', params);
   //get props?
   const id = props.key;
 
@@ -25,7 +30,7 @@ export default function Movie(props) {
       });
     // This effect should run every time time
     // the `id` changes... How could we do this?
-  }, []);
+  }, [id]);
 
   // Uncomment this only when you have moved on to the stretch goals
   // const saveMovie = evt => { }

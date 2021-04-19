@@ -49,6 +49,7 @@ export default function App () {
           </Route>
           <Route path = "/movies/:movieID"> 
             {/* placeholder movie key until I figure it out */}
+            console.log("Route to Movie called")
             <Movie key = "2"/> 
           </Route>
         </Switch>
