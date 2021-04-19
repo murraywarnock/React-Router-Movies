@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+console.log("movie.js called");
+
 export default function Movie(props) {
   const [movie, setMovie] = useState();
+  //get props?
+  const id = props.key;
 
-  let id = 1;
+  // let id = 1;
   // Change ^^^ that line and use a hook to obtain the :id parameter from the URL
+
+
 
   useEffect(() => {
     axios
