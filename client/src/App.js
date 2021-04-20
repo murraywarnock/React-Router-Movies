@@ -44,14 +44,13 @@ export default function App () {
 
       <div>  {/* //Replace this Div with your Routes */}
         <Switch>
+          <Route path = "/movies/:movieID"> 
+            <Movie /> 
+          </Route>
           <Route path = "/">
             <MovieList movies ={movieList}/> 
           </Route>
-          <Route path = "/movies/:movieID"> 
-            {/* placeholder movie key until I figure it out */}
-            console.log("Route to Movie called")
-            <Movie key = "2"/> 
-          </Route>
+
         </Switch>
 
       </div>
