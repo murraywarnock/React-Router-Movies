@@ -37,32 +37,31 @@ function MovieDetails(props) {
 
 
   return (
-    <Link to={`/movies/${props.movie.id}`}>
-    <div className="movie-card">
-    {/* <div className="movie-card" onClick={showMovie} > */}
-      <h2>{title}</h2>
-      <div className="movie-director">
-        Director: <em>{director}</em>
-      </div>
-      <div className="movie-metascore">
-        Metascore: <strong>{metascore}</strong>
-      </div>
+    // <Link to={`/movies/${props.movie.id}`}>
+    // <div className="movie-card">
+    //   <h2>{title}</h2>
+    //   <div className="movie-director">
+    //     Director: <em>{director}</em>
+    //   </div>
+    //   <div className="movie-metascore">
+    //     Metascore: <strong>{metascore}</strong>
+    //   </div>
+    // </div>
+    // </Link>
+
+
+
+   <div className="movie-card" onClick={showMovie} >
+
+    <h2>{title}</h2>
+    <div className="movie-director">
+      Director: <em>{director}</em>
     </div>
-    </Link>
+    <div className="movie-metascore">
+      Metascore: <strong>{metascore}</strong>
+    </div>
+  </div> 
 
-
-  // <Link to={`${url}/movies/${id'}>
-  //  <div className="movie-card" onClick={showMovie} >
-
-  //   <h2>{title}</h2>
-  //   <div className="movie-director">
-  //     Director: <em>{director}</em>
-  //   </div>
-  //   <div className="movie-metascore">
-  //     Metascore: <strong>{metascore}</strong>
-  //   </div>
-  // </div> 
-  //       </Link>
 
 
   );
