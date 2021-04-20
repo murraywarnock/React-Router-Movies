@@ -1,6 +1,6 @@
 import React from 'react';
 // added necessary imports
-import { useHistory, useRouteMatch, Link} from 'react-router-dom'
+import { useHistory, useRouteMatch} from 'react-router-dom'
 // import { Route, useParams, NavLink, useRouteMatch, useHistory, Link } from 'react-router-dom'
 
 // import Movie component
@@ -17,51 +17,42 @@ export default function MovieList(props) {
     </div>
   );
 }
-// const { url, path, params } = useRouteMatch()
-
-// console.log('url', url);
-// console.log('path', path);
-// console.log('params', params);
 
 function MovieDetails(props) {
   // added id to pass through as movieID param
   const { id, title, director, metascore } = props.movie;
   // employed useHistory and id from props to change URL
- 
   const history = useHistory();
   const showMovie = () => {
     history.push(`/movies/${id}`)
 
   };
 
-
-
   return (
-    // <Link to={`/movies/${props.movie.id}`}>
     // <div className="movie-card">
-    //   <h2>{title}</h2>
-    //   <div className="movie-director">
-    //     Director: <em>{director}</em>
-    //   </div>
-    //   <div className="movie-metascore">
-    //     Metascore: <strong>{metascore}</strong>
-    //   </div>
-    // </div>
-    // </Link>
-
-
-
-   <div className="movie-card" onClick={showMovie} >
-
-    <h2>{title}</h2>
-    <div className="movie-director">
-      Director: <em>{director}</em>
+    <div className="movie-card" onClick={showMovie} >
+      <h2>{title}</h2>
+      <div className="movie-director">
+        Director: <em>{director}</em>
+      </div>
+      <div className="movie-metascore">
+        Metascore: <strong>{metascore}</strong>
+      </div>
     </div>
-    <div className="movie-metascore">
-      Metascore: <strong>{metascore}</strong>
-    </div>
-  </div> 
 
+
+  // <Link to={`${url}/movies/${id'}>
+  //  <div className="movie-card" onClick={showMovie} >
+
+  //   <h2>{title}</h2>
+  //   <div className="movie-director">
+  //     Director: <em>{director}</em>
+  //   </div>
+  //   <div className="movie-metascore">
+  //     Metascore: <strong>{metascore}</strong>
+  //   </div>
+  // </div> 
+  //       </Link>
 
 
   );
